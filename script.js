@@ -9,6 +9,9 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuv";
 var specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var numbers = "1234567890";
+var reg = /^\d+$/;
+
+
 
 
 
@@ -24,12 +27,15 @@ function generatePassword() {
     var length = window.prompt("How many characters long do you want your password to be? (between 8 and 128)");
 
     //check for appropiate length, if true, ask if user wants uppercase letters in password
-    if(length >= 8 && length < 129) {
-        up = window.confirm("Do you want upper case letters in your password?");
-    } else {
+    while(length < 8 || length >= 129 || !reg.test(length)) {
+    
+
+
+   
         window.alert("Please enter a number between 8 and 128")
-        console.log(["hello"])
+        length = window.prompt("How many characters long do you want your password to be? (between 8 and 128)");
     }
+    up = window.confirm("Do you want upper case letters in your password?");
     //if user wants uppercase letters add them to their userChoice
     if(up) {
         
