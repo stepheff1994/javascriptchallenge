@@ -19,3 +19,6 @@ the user can select either "ok" to accept the criteria or "cancel" to not accept
 after these four prompts and based on the users accepted criteria the password will generate
 the password will generate in the box above the "generate password" button
 
+https://github.com/stepheff1994/javascriptchallenge
+
+
